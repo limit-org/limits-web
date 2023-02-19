@@ -1,0 +1,53 @@
+body{
+    margin:0;
+    padding:0;
+    background-color:#E2DCDE;
+}
+#header{
+    background-color:#2F2235;
+    margin:0;
+    padding:0;
+    display:grid;
+    grid-template-columns:5% 20% 5% 35% 35%;
+    grid-template-rows:5% 25% 30% 30% 10%;
+    grid-template-areas:
+    "a0 b0 c0 d0 e0"
+    "a1 b1 c1 d1 e1" 
+    "a2 b2 c2 d2 e2"
+    "a3 b3 c3 d3 e3";
+    height:100px;
+    position:static;
+}
+#header_text{
+    grid-area:b1;
+    color:orange;
+    margin-top:25px;
+}
+#header_search{
+    border-radius:10px;
+    grid-area:d2;
+}
+#header_menu{
+    grid-area:e2;
+    width:50px;
+    height:50px;
+    margin-left:75%;
+    margin-top:-10px;
+    z-index:1;
+}
+#sidebar{
+    top:0;
+    background-color:#2F2235;
+    z-index:0;
+    height:100%;
+    width:15%;
+    right:0;
+    position:fixed;
+}
+#sidebar_content{
+    display:flex;
+    position:relative;
+    flex-direction:column;
+    top:50%;
+    right:-25%;
+}
