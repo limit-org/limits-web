@@ -6,7 +6,8 @@ Built using VueJS.
 
 - [ ] Landing 
 - [ ] Topic-Specific Forum
-- [ ] Individual post
+- [ ] Individual post viewing
+- [ ] Individual post creation
 - [ ] Login
 - [ ] Signup
 - [ ] Contact 
