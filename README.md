@@ -1,6 +1,7 @@
 # limits-web 
 
 Built using VueJS. 
+Designed and created by @Netolysis
 
 ### Pages to create: 
 
