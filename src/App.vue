@@ -2,6 +2,14 @@
 import { RouterLink, RouterView } from 'vue-router'
 import Header from './components/Header.vue'
 import TopicBar from './components/Topicbar.vue'
+import $ from 'jquery'
+import { ref } from 'vue'
+
+function tbshow(){
+  const element = document.getElementById("topicbar");
+  element!.style.display = 'none';
+}
+
 </script>
 
 
@@ -9,8 +17,8 @@ import TopicBar from './components/Topicbar.vue'
   <header>
       <Header/>
   </header>
-  <div id="topicbar">
-      <TopicBar/>
+  <div id="topicbar" @show="tbshow">
+    <TopicBar/>
   </div>
 </template>
 
@@ -19,7 +27,7 @@ header{
   height:8%;
   display:grid;
   grid-template-rows:60% 40%;
-  grid-template-columns:20% 15% 30% 15% 20%;
+  grid-template-columns:16% 20% 30% 14% 20%;
   justify-content:center;
   place-items:center;
   grid-template-areas:
@@ -42,6 +50,9 @@ header{
   "a1 b1 c1 d1 e1"
   "a2 b2 c2 d2 e2";
   color:#EEEEEE;
+}
+.hide{
+  display:none;
 }
 </style>
 
