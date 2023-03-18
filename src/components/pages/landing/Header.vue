@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { defineComponent, provide, ref, inject } from 'vue';
 import $ from 'jquery';
+
+
 function flip(){
     const $arrow = $("#header_arrow");
     const isFlipped = $arrow.hasClass("flipp");
@@ -10,18 +13,30 @@ function flip(){
     } else{
         $arrow.addClass("flipp");
         $arrow.css({"transform":"rotate(180deg)", "transition-duration":"1s"});
-    }}
+    }
+}
 </script>
+<script lang="ts">
+
+export default defineComponent({
+   methods:
+    {
+        sub(){
+            this.$emit('toggleSubheader')
+        }
+    }
+});
+</script>
+
 
 <template>
     <h1 id="header_icon">Limits</h1>
     <input type="text" id="header_search" placeholder="Search posts and communities..."/>
     <div id="header_contact">Contact</div>
-    <div id="header_topics" @click="flip(); $emit('show')">Topics<img id="header_arrow" class="arrow flipp" src="./assets/down.svg" alt="down"></div>
+    <div id="header_topics" @click="flip(); sub();">Topics<img id="header_arrow" class="arrow flipp" src="../../icons/down.svg" alt="down"></div>
     <div id="header_about">About Us</div>
     <div id="header_login">Login</div>
     <div id="header_signup">Sign Up</div>
-    <hr>
 </template>
 
 <style scoped>
@@ -44,6 +59,7 @@ function flip(){
     margin-bottom:2%;
     font-weight:900;
     margin-right:5%;
+    cursor:pointer;
 }
 #header_arrow{
     margin-left:8px;

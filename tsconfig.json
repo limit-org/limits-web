@@ -1,5 +1,7 @@
 {
-  "compilerOptions": {"types": ["jquery"]},
+  "compilerOptions": {
+    "types": ["jquery"]
+  },
   "files": [],
   "references": [
     {
